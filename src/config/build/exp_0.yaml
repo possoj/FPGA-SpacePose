@@ -1,0 +1,31 @@
+DATA:
+  BATCH_SIZE: 1
+  IMG_SIZE:
+  - 240
+  - 240
+  ORI_SMOOTH_FACTOR: 3
+  PATH: ../datasets/speed
+FINN:
+  ACCEL:
+    CLK_PERIOD_NS: 5
+    TARGET_CYCLES_PER_FRAME: 800000
+  BOARD:
+    DEPLOYMENT_FOLDER: /home/xilinx/spacecraft_pose_estimation
+    NAME: ZCU104
+  FIFO:
+    AUTO_DEPTH: true
+    RTL_SIM: true
+    SIZING_METHOD: largefifo_rtlsim
+    SPLIT_LARGE: true
+MODEL:
+  BACKBONE:
+    NAME: mobilenet_v2_brevitas
+    RESIDUAL: true
+  HEAD:
+    NAME: ursonet_pytorch
+    N_ORI_BINS_PER_DIM: 12
+    ORI: classification
+    POS: regression
+  MANUAL_COPY: false
+  PATH: models/mobile_ursonet_mpq/model
+  QUANTIZATION: true

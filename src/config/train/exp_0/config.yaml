@@ -1,0 +1,33 @@
+DATA:
+  BATCH_SIZE: 32
+  IMG_SIZE:
+  - 240
+  - 240
+  ORI_SMOOTH_FACTOR: 3
+  ROT_AUGMENT: true
+  OTHER_AUGMENT: true
+  PATH: ../datasets/speed
+  SHUFFLE: true
+MODEL:
+  BACKBONE:
+    NAME: mobilenet_v2_brevitas
+    RESIDUAL: true
+  HEAD:
+    NAME: ursonet_pytorch
+    N_ORI_BINS_PER_DIM: 12
+    ORI: classification
+    POS: regression
+  MANUAL_COPY: true
+  PRETRAINED_PATH: models/mobile_ursonet_fp32/model/parameters.pt
+  QUANTIZATION: true
+TRAIN:
+  N_EPOCH: 20
+  LR: 0.01
+  DECAY: 0
+  OPTIM: SGD
+  MOMENTUM: 0.9
+  SCHEDULER: MultiStepLR
+  GAMMA: 0.1
+  MILESTONES:
+  - 7
+  - 15

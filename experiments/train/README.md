@@ -1,0 +1,1 @@
+The bit-width experiment results are available [here](https://polymtlca0-my.sharepoint.com/:u:/g/personal/julien_posso_polymtlus_ca/EdymKmlJWoZArifz7y1kJVwBjLxVPhczA4Rw61m73gYAuw?e=NbKb4a)
