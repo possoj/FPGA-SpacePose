@@ -7,11 +7,20 @@ FPGA components of a Xilinx MPSoC. Our methodology includes a novel evaluation t
 quantization, optimizing accuracy, latency, and FPGA resource utilization. The resulting implementation is significantly 
 faster and more energy-efficient compared to existing solutions, marking a substantial advancement in the field.
 
-For more details, please refer to the [ArXiv pre-print](TODO). 
+For more details, please refer to the [ArXiv pre-print](https://arxiv.org/abs/2407.06170) / [IEEE Xplore paper](https://ieeexplore.ieee.org/document/10666317). 
 This work was presented at IEEE NEWCAS 2024, a peer-reviewed conference.
 
 ```
-TODO: bibtex
+@INPROCEEDINGS{10666317,
+  author={Posso, Julien and Bois, Guy and Savaria, Yvon},
+  booktitle={2024 22nd IEEE Interregional NEWCAS Conference (NEWCAS)}, 
+  title={Real-Time Spacecraft Pose Estimation Using Mixed-Precision Quantized Neural Network on COTS Reconfigurable MPSoC}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={358-362},
+  keywords={Space vehicles;Quantization (signal);Source coding;Pose estimation;Neural networks;Real-time systems;Energy efficiency;Artificial Intelligence;Neural Networks;Mixed-Precision Quantization;Inference;Embedded Systems;Aerospace},
+  doi={10.1109/NewCAS58973.2024.10666317}}
 ```
 
 We have also provided the poster presented at the conference for a visual summary of our work. You can view it below:
@@ -129,7 +138,6 @@ For more details about the FINN Dataflow configuration, see the `build.py` scrip
 
 ### Build Custom FPGA Accelerator
 
-[//]: # (TODO: english check)
 To build the neural network FPGA accelerator, launch the [build docker image](setup/build/README.md), 
 go to the project root folder, and launch the build script.
 ```shell
